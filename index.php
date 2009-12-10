@@ -12,6 +12,10 @@
  * - Objects deal with caching between a sqlite file and actual on disk files.
  */
 
+require('libs/Smarty/Smarty.class.php');
+$smarty = new Smarty;
+$smarty->assign('foo','bar');
+$smarty->display('index.tpl');
 
 ?>
 

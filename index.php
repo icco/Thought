@@ -1,8 +1,8 @@
 <?php
 
 // Includes
-require 'libs/Smarty/Smarty.class.php';
-require 'libs/markdown.php';
+require 'Libs/Smarty/Smarty.class.php';
+require 'Libs/markdown.php';
 
 /*
  * Basic idea:
@@ -25,7 +25,7 @@ date_default_timezone_set($config->timezone);
 $smarty = new Smarty;
 $smarty->assign('foo','bar');
 $smarty->assign('title', $config->title);
-$smarty->display('templates/index.tpl');
+$smarty->display('Templates/index.tpl');
 
 ?>
 

@@ -1,7 +1,5 @@
 <?php
 
-
-
 // Includes
 require 'Libs/Smarty/Smarty.class.php';
 require 'Libs/markdown.php';
@@ -11,7 +9,6 @@ function my_autoload($class) {
    if (file_exists($path))
       @require $path;
 }
-
 spl_autoload_register('my_autoload');
 
 /*
@@ -24,11 +21,7 @@ spl_autoload_register('my_autoload');
  * - Objects deal with caching between a sqlite file and actual on disk files.
  */
 
-class Config {
-   public $title = "Nat's Blog";
-   public $timezone = "America/Los_Angeles";
-}
-
+// Set up page
 $config = new Config();
 date_default_timezone_set($config->timezone);
 
@@ -39,4 +32,3 @@ $smarty->assign('posts', Post::getPosts(5));
 $smarty->display('templates/index.tpl');
 
 ?>
-

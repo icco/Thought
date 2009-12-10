@@ -9,7 +9,7 @@ I want to be able to do more in plain text, with using as few database calls as
 possible. So what I think I'm going to do is use an even slower approach and
 make calls to disk. This is all very much based off the idea of jekyll. but
 basically there is a file that contains the post content in markdown and a file
-that contains the meta data about the file. Cacheing will be done in SQLite, I
+that contains the meta data about the file. Caching will be done in SQLite, I
 think.
 
 ## Who?

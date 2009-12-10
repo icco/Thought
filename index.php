@@ -14,10 +14,17 @@ require 'libs/markdown.php';
  * - Objects deal with caching between a sqlite file and actual on disk files.
  */
 
-date_default_timezone_set("America/Los_Angeles");
+class Config {
+   public $title = "Nat's Blog";
+   public $timezone = "America/Los_Angeles";
+}
+
+$config = new Config();
+date_default_timezone_set($config->timezone);
 
 $smarty = new Smarty;
 $smarty->assign('foo','bar');
+$smarty->assign('title', $config->title);
 $smarty->display('templates/index.tpl');
 
 ?>

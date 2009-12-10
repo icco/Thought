@@ -1,8 +1,8 @@
 <?php
 
 // Includes
-require('libs/Smarty/Smarty.class.php');
-include_once "markdown.php";
+require 'libs/Smarty/Smarty.class.php';
+require 'libs/markdown.php';
 
 /*
  * Basic idea:
@@ -14,9 +14,11 @@ include_once "markdown.php";
  * - Objects deal with caching between a sqlite file and actual on disk files.
  */
 
+date_default_timezone_set("America/Los_Angeles");
+
 $smarty = new Smarty;
 $smarty->assign('foo','bar');
-$smarty->display('index.tpl');
+$smarty->display('templates/index.tpl');
 
 ?>
 

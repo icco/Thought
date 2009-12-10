@@ -3,6 +3,8 @@
 <h1>{$title}</h1>
 <h2>{$description}</h2>
 
+
+<div id="about">
 <h3>About</h3>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem nisl,
@@ -15,6 +17,7 @@ mauris a dolor porttitor non placerat lacus laoreet. Sed at mauris ligula.
 Quisque ligula odio, placerat ut fringilla eu, mattis ut dui. Vivamus commodo
 tincidunt purus a tempus. 
 </p>
+</div>
 
 {if count($posts) > 0}
 <h3>Newest Posts</h3>

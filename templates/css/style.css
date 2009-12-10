@@ -1,0 +1,12 @@
+body {
+   width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 55px;
+   font-family: Helvetica, Helvetica Neue, Arial;
+}
+
+h3 {
+   cursor: pointer;
+}
+

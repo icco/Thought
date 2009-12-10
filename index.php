@@ -1,8 +1,18 @@
 <?php
 
+
+
 // Includes
 require 'Libs/Smarty/Smarty.class.php';
 require 'Libs/markdown.php';
+
+function my_autoload($class) {
+   $path = "Objects/{$class}.php";
+   if (file_exists($path))
+      @require $path;
+}
+
+spl_autoload_register('my_autoload');
 
 /*
  * Basic idea:
@@ -22,10 +32,11 @@ class Config {
 $config = new Config();
 date_default_timezone_set($config->timezone);
 
+// Build Page
 $smarty = new Smarty;
-$smarty->assign('foo','bar');
 $smarty->assign('title', $config->title);
-$smarty->display('Templates/index.tpl');
+$smarty->assign('posts', Post::getPosts(5));
+$smarty->display('templates/index.tpl');
 
 ?>
 
